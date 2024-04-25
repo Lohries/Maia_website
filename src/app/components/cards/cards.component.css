@@ -1,18 +1,22 @@
 .card {
     font-weight: 500;
     display: flex;
-    justify-content: space-between; /* Adjust as needed */
-    border-radius: 5px;
+    justify-content: space-between; 
+    border-radius: 20px;
+    padding: 10px;
+    margin-top: 50px;
+    max-width: 100%;
 }
+
 .flip-card {
     background-color: transparent;
-    width: 300px;
-    height: 200px;
-    border: 1px solid #f1f1f1;
+    width: 100%;
+    height: auto;
     perspective: 1000px; 
+    border-radius: 20px;
+    margin-bottom: 20px;
 }
-  
- 
+
 .flip-card-inner {
     position: relative;
     width: 100%;
@@ -21,13 +25,11 @@
     transition: transform 0.8s;
     transform-style: preserve-3d;
 }
-  
-  
+
 .flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
 }
-  
-  
+
 .flip-card-front, .flip-card-back {
     position: absolute;
     width: 100%;
@@ -35,31 +37,64 @@
     -webkit-backface-visibility: hidden; 
     backface-visibility: hidden;
 }
-  
 
 .flip-card-front {
     background-color: #595959;
     color: black;
-    border-radius: 5px;
+    border-radius: 20px;
 }
 
 .flip-card-back {
-    background-color: rgb(80, 228, 201);
+    background-color:  #179D9A;
     color: rgb(0, 0, 0);
     transform: rotateY(180deg);
-    border-radius: 5px;
+    border-radius: 20px;
 }
 
 button {
-    font-weight: 500;
+    appearance: button;
+    backface-visibility: hidden;
+    background-color: #4C5755;
     border-radius: 6px;
-    background-color: rgb(80, 228, 201);
-    width: 100px;
-    height: 25px; 
-    transition: background-color 0.3s ease; 
+    border-width: 0;
+    box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: -apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Ubuntu,sans-serif;
+    font-size: 100%;
+    height: 44px;
+    line-height: 1.15;
+    margin: 12px 0 0;
+    outline: none;
+    overflow: hidden;
+    padding: 0 25px;
+    position: relative;
+    text-align: center;
+    text-transform: none;
+    transform: translateZ(0);
+    transition: all .2s,box-shadow .08s ease-in;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 50%;
 }
 
-button:hover {
-    background-color: rgb(40, 180, 40); /* Cor diferente ao passar o mouse */
+.button:disabled {
+    cursor: default;
 }
 
+.button:focus {
+    box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .2) 0 6px 15px 0, rgba(0, 0, 0, .1) 0 2px 2px 0, rgba(50, 151, 211, .3) 0 0 0 4px;
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex-direction: column;
+        align-items: center;
+    }
+  
+    button {
+        width: 100%;
+    }
+}
