@@ -1,0 +1,50 @@
+.welcome-img {
+    position: relative;
+    width: 100%;
+    -webkit-filter: blur(15px);
+    -moz-filter: blur(15px);
+    -o-filter: blur(15px);
+    -ms-filter: blur(15px);
+    filter: blur(15px);
+    width: 100%;
+    height: 100vh;
+    padding: 70px;
+}
+
+.first-line {
+    font-size: 3em;
+    border-right: 2px, solid, black;
+}
+
+.typing-animation {
+    overflow: hidden; 
+    white-space: nowrap; 
+    animation: typing 4s steps(40) infinite, blinkCursor 500ms infinite; 
+}
+
+/* Animação de digitação */
+@keyframes typing {
+    from {
+        width: 0; 
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Animação de piscar do cursor */
+@keyframes blinkCursor {
+    from {
+        border-right-color: transparent;
+    }
+    to {
+        border-right-color: black; 
+    }
+}
+
+
+@media (max-width: 768px) {
+    .welcome-img {
+        width: 100%;
+    }
+}
