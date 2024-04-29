@@ -1,50 +1,52 @@
 .welcome-img {
     position: relative;
     width: 100%;
-    -webkit-filter: blur(15px);
-    -moz-filter: blur(15px);
-    -o-filter: blur(15px);
-    -ms-filter: blur(15px);
-    filter: blur(15px);
-    width: 100%;
     height: 100vh;
     padding: 70px;
+    -webkit-filter: blur(10px);
+    -moz-filter: blur(10px);
+    -o-filter: blur(10px);
+    -ms-filter: blur(10px);
+    filter: blur(5px);
 }
 
-.first-line {
+.first-line,
+.second-line {
+    
     font-size: 3em;
-    border-right: 2px, solid, black;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    position: relative;
 }
 
 .typing-animation {
     overflow: hidden; 
     white-space: nowrap; 
-    animation: typing 4s steps(40) infinite, blinkCursor 500ms infinite; 
+    animation: animate 3s;
 }
 
-/* Animação de digitação */
-@keyframes typing {
-    from {
-        width: 0; 
+.typing2-animation {
+    overflow: hidden; 
+    white-space: nowrap; 
+    animation: animate 4s; 
+}
+
+@keyframes animate {
+    0%, 50%, 100% {
+        width: 0;
     }
-    to {
+    70%, 100% {
         width: 100%;
     }
 }
 
-/* Animação de piscar do cursor */
-@keyframes blinkCursor {
-    from {
-        border-right-color: transparent;
-    }
-    to {
-        border-right-color: black; 
-    }
-}
-
-
-@media (max-width: 768px) {
+@media (min-width: 800px) {
     .welcome-img {
+        width: 100%;
+    }
+    .first-line,
+    .second-line {
         width: 100%;
     }
 }
