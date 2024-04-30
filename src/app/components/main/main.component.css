@@ -1,0 +1,60 @@
+@import "https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap";
+
+/*  #4C5755    #179D9A     #58B69E     #74C3BF     #FFFFFF     #8E8E8E*/
+
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-family: "Poppins", sans-serif;
+   
+}
+
+body {
+   background: linear-gradient( #58B69E,  #4C5755);
+   
+
+}
+
+
+
+
+.parallax {
+   height: 100vh;
+   overflow-x: hidden;
+   overflow-y: auto;
+   position: relative;
+}
+
+.parallax-bg {
+
+   background-position: center;
+   background-attachment: fixed; 
+   height: 100%;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   z-index: -1;
+   min-height: 100vh;
+
+}
+
+.parallax-content{
+   text-align: center;
+   color: #000000;
+   position: relative;
+   z-index: 1;
+   padding-top: 20%;
+
+
+}
+
+.content {
+   height: 150vh; 
+
+
+}
+
+
+
