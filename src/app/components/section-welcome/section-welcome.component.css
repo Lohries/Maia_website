@@ -1,8 +1,10 @@
 .welcome-img {
     position: relative;
-    width: 100%;
+    width: 100%; /* Alterado para 100% para torná-lo responsivo */
     height: 100vh;
-    padding: 70px;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
     -webkit-filter: blur(10px);
     -moz-filter: blur(10px);
     -o-filter: blur(10px);
@@ -12,7 +14,6 @@
 
 .first-line,
 .second-line {
-    
     font-size: 3em;
     display: flex;
     text-align: center;
@@ -21,15 +22,15 @@
 }
 
 .typing-animation {
-    overflow: hidden; 
-    white-space: nowrap; 
+    overflow: hidden;
+    white-space: nowrap;
     animation: animate 3s;
 }
 
 .typing2-animation {
-    overflow: hidden; 
-    white-space: nowrap; 
-    animation: animate 4s; 
+    overflow: hidden;
+    white-space: nowrap;
+    animation: animate 4s;
 }
 
 @keyframes animate {
@@ -41,9 +42,9 @@
     }
 }
 
-@media (min-width: 800px) {
+@media (max-width: 800px) {
     .welcome-img {
-        width: 100%;
+        width: 100%; 
     }
     .first-line,
     .second-line {
