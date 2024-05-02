@@ -1,0 +1,173 @@
+body {
+   background: linear-gradient( #58B69E,  #4C5755);
+   
+}
+
+
+
+
+.parallax {
+   height: 100vh;
+   overflow-x: hidden;
+   overflow-y: auto;
+   position: relative;
+}
+
+.parallax-bg {
+
+   background-position: center;
+   background-attachment: fixed; 
+   height: 100%;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   z-index: -1;
+   min-height: 100vh;
+
+}
+
+.parallax-content{
+   text-align: center;
+   color: #000000;
+   position: relative;
+   z-index: 1;
+   padding-top: 20%;
+
+
+}
+
+.content {
+   height: 150vh; 
+
+
+}
+.topic-cards {
+   padding-top: 20px;
+   font-size: 2.5em;
+   display: flex;
+   text-align: center;
+   justify-content: center;
+   overflow: hidden; 
+   white-space: nowrap; 
+   animation: animate 6s; 
+}
+
+.card {
+   font-weight: 500;
+   display: flex;
+   justify-content: space-between; 
+   border-radius: 20px;
+   padding: 15px;
+   margin-top: 50px;
+   margin-bottom: 20px; 
+   max-width: 100%;
+}
+
+.flip-card {
+   background-color: transparent;
+   width: 100%;
+   height: auto;
+   perspective: 1000px; 
+   border-radius: 20px;
+   margin-bottom: 20px;
+   justify-content: space-between;
+
+}
+
+.flip-card-inner {
+   position: relative;
+   width: 100%;
+   height: 100%;
+   text-align: center;
+   transition: transform 0.5s;
+   transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+   transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   -webkit-backface-visibility: hidden; 
+   backface-visibility: hidden;
+}
+
+.flip-card-front {
+   background-color: #595959;
+   color: black;
+   border-radius: 20px;
+}
+
+.flip-card-back {
+   background-color:  #179D9A;
+   color: rgb(0, 0, 0);
+   transform: rotateY(180deg);
+   border-radius: 20px;
+}
+
+button {
+   appearance: button;
+   backface-visibility: hidden;
+   background-color: #4C5755;
+   border-radius: 6px;
+   border-width: 0;
+   box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0;
+   box-sizing: border-box;
+   color: #FFFFFF;
+   cursor: pointer;
+   font-family: -apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Ubuntu,sans-serif;
+   font-size: 100%;
+   height: 44px;
+   line-height: 1.15;
+   margin: 12px 0 0;
+   outline: none;
+   overflow: hidden;
+   padding: 0 25px;
+   position: relative;
+   text-align: center;
+   text-transform: none;
+   transform: translateZ(0);
+   transition: all .2s,box-shadow .08s ease-in;
+   user-select: none;
+   -webkit-user-select: none;
+   touch-action: manipulation;
+   width: 50%;
+   font-weight: bold;
+}
+
+button:focus {
+   box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .2) 0 6px 15px 0, rgba(0, 0, 0, .1) 0 2px 2px 0, rgba(50, 151, 211, .3) 0 0 0 4px;
+}
+
+button:hover {
+   width: 65%;
+   color: black;
+   background-color: #179D9A;
+}
+
+@media screen and (max-width: 973px) {
+   .card {
+       padding: 20px; /* Corrigido o valor de padding para dispositivos de tela estreita */
+       width: fit-content;
+       height: fit-content;
+       
+   }
+ 
+   button {
+       width: 100%;
+   }
+}  
+
+@keyframes animate {
+   50%, 100% {
+       width: 0;
+   }
+   70%, 100% {
+       width: 100%;
+   }
+}
+ 

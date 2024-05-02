@@ -1,36 +1,4 @@
 
-.card3 {
-    font-weight: 500;
-    display: flex;
-    justify-content: space-between; 
-    border-radius: 20px;
-    padding: 15px;
-    max-width: 100%;
-    margin-top: 400px;
-}
-
-
-.card2 {
-    font-weight: 500;
-    display: flex;
-    justify-content: space-between; 
-    border-radius: 20px;
-    padding: 15px;
-    max-width: 100%;
-    margin-top: 400px;
-}
-
-.topic {
-    padding-top: 200px;
-    font-size: 2.5em;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    overflow: hidden; 
-    white-space: nowrap; 
-    animation: animate 6s; 
-}
-
 
 .card {
     font-weight: 500;
