@@ -12,9 +12,16 @@
     filter: blur(5px);
 }
 
-.first-line,
-.second-line {
+.first-line{
     font-size: 3em;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    position: relative;
+
+}
+.second-line {
+    font-size: 1.5em;
     display: flex;
     text-align: center;
     justify-content: center;
@@ -50,4 +57,13 @@
     .second-line {
         width: 100%;
     }
+}
+.caption {
+    position: absolute;
+    top: 145px;
+    right: 20px;
+    font-size: 40px;
+    color: black;
+    font-weight: bold;
+ 
 }
