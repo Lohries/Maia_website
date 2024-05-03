@@ -40,7 +40,6 @@ body {
 .content {
    height: 150vh; 
 
-
 }
 .topic-cards {
    padding-top: 20px;
@@ -50,7 +49,7 @@ body {
    justify-content: center;
    overflow: hidden; 
    white-space: nowrap; 
-   animation: animate 6s; 
+   animation: animate 2s; 
 }
 
 .card {
@@ -60,6 +59,16 @@ body {
    border-radius: 20px;
    padding: 15px;
    margin-top: 50px;
+   margin-bottom: 20px; 
+   max-width: 100%;
+}
+.card2 {
+   font-weight: 500;
+   display: flex;
+   justify-content: space-between; 
+   border-radius: 20px;
+   padding: 15px;
+   margin-top: 500px;
    margin-bottom: 20px; 
    max-width: 100%;
 }
@@ -149,24 +158,84 @@ button:hover {
    background-color: #179D9A;
 }
 
+.text1 {
+   font-size: 3em;
+   display: flex;
+   margin-right: 400px;
+   position: relative;
+
+}
+
+.text2 {
+   font-size: 1.5em;
+
+   margin-right: 400px;
+   text-align: center;
+   justify-content: center;
+
+}
+.typing-animation2 {
+   overflow: hidden;
+   white-space: nowrap;
+   animation: animate 5s;
+}
+
+.typing-animation {
+   overflow: hidden;
+   white-space: nowrap;
+   animation: animate 3s;
+}
+
 @media screen and (max-width: 973px) {
    .card {
-       padding: 20px; /* Corrigido o valor de padding para dispositivos de tela estreita */
-       width: fit-content;
-       height: fit-content;
+      padding: 20px; /* Corrigido o valor de padding para dispositivos de tela estreita */
+      width: fit-content;
+      height: fit-content;
        
    }
  
    button {
-       width: 100%;
+      width: 100%;
    }
 }  
 
 @keyframes animate {
-   50%, 100% {
-       width: 0;
+
+   0% {
+      width: 0;
    }
-   70%, 100% {
-       width: 100%;
-   }
+   100% {
+      width: 100%;
+   }  
 }
+.welcome-img {
+   position: relative;
+   width: 100%; /* Alterado para 100% para torná-lo responsivo */
+   height: 100vh;
+   padding: 0;
+   margin: 0;
+   justify-content: center;
+   -webkit-filter: blur(10px);
+   -moz-filter: blur(10px);
+   -o-filter: blur(10px);
+   -ms-filter: blur(10px);
+
+}
+
+.caption {
+   position: absolute;
+   top: 145px;
+   right: 20px;
+   font-size: 40px;
+   color: black;
+   font-weight: bold;
+
+}
+
+.sector-img {
+   display: flex;
+   justify-content: space-between;
+   padding: 50px;
+   animation: animate-img 5s;
+}
+
